@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+	compileSdkVersion 26
+	buildToolsVersion "26.0.1"
+	defaultConfig {
+		applicationId "de.christinecoenen.code.qrcodetest"
+		minSdkVersion 21
+		targetSdkVersion 26
+		versionCode 1
+		versionName "1.0"
+		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+	}
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
+}
+
+dependencies {
+	compile 'com.android.support:appcompat-v7:26.0.2'
+	compile 'com.journeyapps:zxing-android-embedded:3.5.0'
+}
